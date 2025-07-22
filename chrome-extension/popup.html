@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 300px;
+      padding: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: linear-gradient(135deg, #f8f9ff, #e6f3ff);
+      margin: 0;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .icon {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+    
+    .title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #333;
+      margin: 0;
+    }
+    
+    .subtitle {
+      font-size: 12px;
+      color: #666;
+      margin: 4px 0 0 0;
+    }
+    
+    .description {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.4;
+      margin: 16px 0;
+    }
+    
+    .button {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(135deg, #8B5CF6, #3B82F6);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+      margin-bottom: 12px;
+    }
+    
+    .button:hover {
+      background: linear-gradient(135deg, #7C3AED, #2563EB);
+      transform: translateY(-1px);
+    }
+    
+    .stats {
+      background: white;
+      padding: 12px;
+      border-radius: 8px;
+      margin-top: 16px;
+      border: 1px solid #e0e0e0;
+    }
+    
+    .stat-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      font-size: 13px;
+    }
+    
+    .stat-label {
+      color: #666;
+    }
+    
+    .stat-value {
+      font-weight: 500;
+      color: #333;
+    }
+    
+    .footer {
+      text-align: center;
+      margin-top: 16px;
+      font-size: 11px;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="icon">👻</div>
+    <h1 class="title">iBuyNothing Guard</h1>
+    <p class="subtitle">Active and protecting</p>
+  </div>
+  
+  <p class="description">
+    Your mindful shopping companion is active and watching for checkout attempts on Amazon.
+  </p>
+  
+  <button class="button" id="visitStore">Visit BuyNothing Store</button>
+  
+  <div class="stats">
+    <div class="stat-item">
+      <span class="stat-label">Interventions today:</span>
+      <span class="stat-value" id="interventionsToday">0</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-label">Money potentially saved:</span>
+      <span class="stat-value" id="moneySaved">$0</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-label">Status:</span>
+      <span class="stat-value">🟢 Active</span>
+    </div>
+  </div>
+  
+  <div class="footer">
+    Take your power back. One checkout at a time.
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

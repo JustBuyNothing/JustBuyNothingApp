@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(60, 4.8%, 95.9%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+  
+  /* Custom BuyNothing colors */
+  --amazon-orange: hsl(39, 100%, 50%);
+  --amazon-navy: hsl(210, 29%, 19%);
+  --ghost-teal: hsl(193, 100%, 40%);
+  --amazon-gray: hsl(0, 0%, 34%);
+  --amazon-dark: hsl(210, 11%, 7%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .text-amazon-orange {
+    color: var(--amazon-orange);
+  }
+  
+  .text-amazon-navy {
+    color: var(--amazon-navy);
+  }
+  
+  .text-ghost-teal {
+    color: var(--ghost-teal);
+  }
+  
+  .text-amazon-gray {
+    color: var(--amazon-gray);
+  }
+  
+  .text-amazon-dark {
+    color: var(--amazon-dark);
+  }
+  
+  .bg-amazon-orange {
+    background-color: var(--amazon-orange);
+  }
+  
+  .bg-amazon-navy {
+    background-color: var(--amazon-navy);
+  }
+  
+  .bg-ghost-teal {
+    background-color: var(--ghost-teal);
+  }
+  
+  .bg-amazon-gray {
+    background-color: var(--amazon-gray);
+  }
+  
+  .bg-amazon-dark {
+    background-color: var(--amazon-dark);
+  }
+  
+  .hover\:bg-amazon-orange:hover {
+    background-color: var(--amazon-orange);
+  }
+  
+  .hover\:bg-ghost-teal:hover {
+    background-color: var(--ghost-teal);
+  }
+  
+  .hover\:text-ghost-teal:hover {
+    color: var(--ghost-teal);
+  }
+  
+  .border-amazon-orange {
+    border-color: var(--amazon-orange);
+  }
+  
+  .border-ghost-teal {
+    border-color: var(--ghost-teal);
+  }
+}

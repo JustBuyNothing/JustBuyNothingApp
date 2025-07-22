@@ -1,0 +1,175 @@
+/* iBuyNothing Guard Styles */
+.buynothing-guard-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.buynothing-guard-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(3px);
+}
+
+.buynothing-guard-content {
+  background: white;
+  border-radius: 16px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  animation: buynothing-guard-fadeIn 0.3s ease-out;
+}
+
+@keyframes buynothing-guard-fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.buynothing-guard-header {
+  display: flex;
+  align-items: center;
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid #f0f0f0;
+  position: relative;
+}
+
+.buynothing-guard-icon {
+  font-size: 24px;
+  margin-right: 12px;
+}
+
+.buynothing-guard-header h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  flex: 1;
+}
+
+.buynothing-guard-close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.buynothing-guard-close:hover {
+  background: #f5f5f5;
+  color: #333;
+}
+
+.buynothing-guard-body {
+  padding: 20px 24px;
+}
+
+.buynothing-guard-message {
+  margin: 0 0 24px 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #444;
+}
+
+.buynothing-guard-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.buynothing-guard-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+.buynothing-guard-btn-primary {
+  background: linear-gradient(135deg, #8B5CF6, #3B82F6);
+  color: white;
+}
+
+.buynothing-guard-btn-primary:hover {
+  background: linear-gradient(135deg, #7C3AED, #2563EB);
+  transform: translateY(-1px);
+}
+
+.buynothing-guard-btn-secondary {
+  background: #f8f9fa;
+  color: #495057;
+  border: 1px solid #dee2e6;
+}
+
+.buynothing-guard-btn-secondary:hover {
+  background: #e9ecef;
+  border-color: #adb5bd;
+}
+
+.buynothing-guard-btn-tertiary {
+  background: transparent;
+  color: #6c757d;
+  border: 1px solid transparent;
+}
+
+.buynothing-guard-btn-tertiary:hover {
+  background: #f8f9fa;
+  color: #495057;
+}
+
+.buynothing-guard-footer {
+  text-align: center;
+  padding: 16px 24px 20px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.buynothing-guard-footer p {
+  margin: 0;
+  font-size: 12px;
+  color: #666;
+  font-style: italic;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .buynothing-guard-content {
+    margin: 20px;
+    width: calc(100% - 40px);
+  }
+  
+  .buynothing-guard-header,
+  .buynothing-guard-body,
+  .buynothing-guard-footer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .buynothing-guard-message {
+    font-size: 15px;
+  }
+}
